@@ -40,6 +40,9 @@ function PasswordPrompts () {
     // check if at least one chrt chosen by the use is true
     if(lowercase == true) {
 
+      // if lower
+      // add lowerCharsArray to userOptionsArray
+
       var userOptionsArray= userOptionsArray.concat(lowerCaseArray);
       }
 
@@ -60,13 +63,12 @@ function PasswordPrompts () {
 
     if (lowercase == true || uppercase == true || numeric == true || specialCharacter == true) {
 
-      console.log("caling generate passowrd");
+      console.log("caling generate password");
       var newPassword = generatePassword (length,userOptionsArray);
-      // console.log (generatePassword);
     }
-    else if (VarNotConfirmed) {
-    alert ("Confirm your choices");
-    }
+    // else if (VarNotConfirmed) {  DOES NOT WORK
+    // alert ("Confirm your choices");
+    // }
 } 
 
   // generate password 
@@ -84,28 +86,18 @@ function PasswordPrompts () {
     console.log(UserOptionsArray[randomIndex]);
 
     var  userPassword = userPassword.concat(UserOptionsArray[randomIndex]);
+
+    // return password
     console.log(userPassword);
+    // mutate an array to a string 
+    var userPassword = userPassword.toString();
 }
+  return userPassword;
     } 
 
 
-  // if everything is correct - alert password
- // return password
-
 // Write password to the #password input
 function writePassword() {
-//  call generatePassword
-
-// if lower
-  // push lower random character to password
-  // add lowerCharsArray to userOptionsArray
-
-//  DO THE SAME FOR THE REST 
-
-// for look between start number of element in password to the requested number of characters
-
-// mutate an array to a string 
-// return password string
 
   var password = PasswordPrompts();
 
