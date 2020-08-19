@@ -62,7 +62,7 @@ function PasswordPrompts () {
 
       console.log("caling generate passowrd");
       var newPassword = generatePassword (length,userOptionsArray);
-      console.log (generatePassword);
+      // console.log (generatePassword);
     }
     else if (VarNotConfirmed) {
     alert ("Confirm your choices");
@@ -74,19 +74,20 @@ function PasswordPrompts () {
 
     console.log(len);
     console.log(UserOptionsArray);
+
+    var userPassword = [];
   
     for (i =0; i < len; i++) {
       
-    var  password = Math.floor(Math.random() * UserOptionsArray.length); 
+    var  randomIndex = Math.floor(Math.random() * UserOptionsArray.length); 
 
-    console.log(UserOptionsArray[password]);
-    
-    
+    console.log(UserOptionsArray[randomIndex]);
+
+    var  userPassword = userPassword.concat(UserOptionsArray[randomIndex]);
+    console.log(userPassword);
+}
     } 
 
-
-    password;
-}
 
   // if everything is correct - alert password
  // return password
