@@ -40,8 +40,7 @@ function PasswordPrompts () {
     // check if at least one chrt chosen by the use is true
     if(lowercase == true) {
 
-      // if lower
-      // add lowerCharsArray to userOptionsArray
+      // if var is confirmed add CharsArray to userOptionsArray
 
       var userOptionsArray= userOptionsArray.concat(lowerCaseArray);
       }
@@ -63,12 +62,14 @@ function PasswordPrompts () {
 
     if (lowercase == true || uppercase == true || numeric == true || specialCharacter == true) {
 
-      console.log("caling generate password");
+      console.log("calling generate password");
       var newPassword = generatePassword (length,userOptionsArray);
+      return newPassword;
+    
     }
-    // else if (VarNotConfirmed) {  DOES NOT WORK
-    // alert ("Confirm your choices");
-    // }
+    else if (lowercase == false && uppercase == false && numeric == false && specialCharacter == false) {
+      alert ("Password must have values. Please click to Generate Password to start over.");
+    }
 } 
 
   // generate password 
@@ -91,8 +92,10 @@ function PasswordPrompts () {
     console.log(userPassword);
     // mutate an array to a string 
     var userPassword = userPassword.toString();
-}
-  return userPassword;
+    }
+    console.log("New password is generated");
+    return userPassword;
+
     } 
 
 
@@ -103,7 +106,8 @@ function writePassword() {
 
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password; 
+  
 
 }
 
