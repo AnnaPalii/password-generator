@@ -90,12 +90,10 @@ function PasswordPrompts () {
 
     // return password
     console.log(userPassword);
-    // mutate an array to a string 
-    var userPassword = userPassword.toString();
     }
-    console.log("New password is generated");
-    return userPassword;
-
+    // mutate an array to a string  and return userPassword;
+    return userPassword.join('');
+    
     } 
 
 
@@ -108,7 +106,6 @@ function writePassword() {
 
   passwordText.value = password; 
   
-
 }
 
 // Add event listener to generate button
