@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: white;
 }
 
 .wrapper {
@@ -43,6 +43,7 @@ header {
 }
 
 .card-header::after {
+  text-align: center;
   content: " ";
   display: block;
   width: 100%;
@@ -135,3 +136,12 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+.header img {
+  float: centre;
+  width: 250px;
+  height: 250px;
+  background: #555;
+}
+
+
+
